@@ -37,14 +37,14 @@ export function Repository() {
   const repository = findRepositoryById(repositoryId);
 
   function handleIssueNavigation(issueUrl: string) {
-    Linking.canOpenURL(issueUrl)
-      .then(() => {
-        Linking.openURL(issueUrl);
-      })
-      .catch((error) => {
-        console.log(error);
-        Alert.alert('Não foi possível abrir em um link externo.');
-      });
+    // Linking.canOpenURL(issueUrl)
+    //   .then(() => {
+    Linking.openURL(issueUrl);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    //   Alert.alert('Não foi possível abrir em um link externo.');
+    // });
   }
 
   return (
